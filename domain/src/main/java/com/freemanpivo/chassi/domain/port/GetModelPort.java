@@ -3,6 +3,6 @@ package com.freemanpivo.chassi.domain.port;
 import java.util.List;
 
 public interface GetModelPort<T> {
-  T getDetails(String id);
+  T getDetails(Long id);
   List<T> getAll();
 }

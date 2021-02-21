@@ -23,7 +23,7 @@ public class UserGetController {
     private final UserDtoMapper mapper;
 
     @GetMapping(value = "/{id}")
-    private ResponseEntity<UserDto> getUserDetais(@PathVariable("id") final String id) {
+    private ResponseEntity<UserDto> getUserDetais(@PathVariable("id") final Long id) {
         final var user = retrieveUsers.getDetails(id);
 
         return ResponseEntity.ok(mapper.toDto(user));
